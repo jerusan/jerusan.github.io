@@ -1,0 +1,112 @@
+.project {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-header {
+    margin-bottom: 2rem;
+}
+
+.project-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.project-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.project-meta span {
+    margin-right: 1rem;
+}
+
+.project-image {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-content {
+    line-height: 1.6;
+    color: #333;
+}
+
+.project-content h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: #222;
+}
+
+.project-content h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+    color: #333;
+}
+
+.project-content p {
+    margin-bottom: 1.5rem;
+}
+
+.project-content ul, .project-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.project-content li {
+    margin-bottom: 0.5rem;
+}
+
+.project-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.project-footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.project-footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-footer li {
+    background: #f5f5f5;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .project {
+        padding: 1rem;
+    }
+
+    .project-header h1 {
+        font-size: 2rem;
+    }
+
+    .project-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+} 

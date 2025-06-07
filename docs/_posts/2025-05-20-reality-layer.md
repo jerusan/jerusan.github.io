@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reality Layer: Mapping the Universe of Human Beliefs"
-date: 2025-05-01
+date: 2025-05-20
 author: Jerusan Jegatheeswaran
 categories: [Projects, AI, Personal Development]
 tags: [AI, Belief Analysis, Personal Growth, React, Next.js]
