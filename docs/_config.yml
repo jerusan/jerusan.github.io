@@ -3,3 +3,10 @@ description: Reflections on systems, code, and cognition.
 author: Jerusan Jegatheeswaran
 theme: jekyll-theme-minimal
 show_downloads: false
+baseurl: ""
+url: "https://jerusan.github.io"
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-github-metadata
