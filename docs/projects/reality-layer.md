@@ -5,7 +5,7 @@ date: 2024-03-20
 author: Jerusan Jegatheeswaran
 categories: [Projects, AI, Personal Development]
 tags: [AI, Belief Analysis, Personal Growth, React, Next.js]
-image: /assets/images/reality-layer-hero.jpg
+image: /assets/images/layers-icon.svg
 ---
 
 In an era where information overload and cognitive biases cloud our judgment, Reality Layer emerges as a groundbreaking platform that helps individuals navigate the complex landscape of their beliefs. This innovative tool combines artificial intelligence with intuitive visualization to create a unique space for intellectual growth and self-discovery.

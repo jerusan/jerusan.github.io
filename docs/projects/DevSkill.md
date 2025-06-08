@@ -5,7 +5,7 @@ date: 2025-06-07
 author: Jerusan Jegatheeswaran
 categories: [Projects, Education, Software Engineering]
 tags: [Interview Prep, Learning Platform, React, FastAPI, WebAssembly]
-image: /assets/images/devskill-hero.jpg
+image: /assets/images/DevSkill-icon.svg
 ---
 
 In a world where technical interviews are gatekeepers to life-changing opportunities, **DevSkill** emerges as a transformative platform that reimagines how we prepare for and master coding interviews. Combining structured pedagogy, real-world simulations, and intelligent feedback, DevSkill isn't just another practice site—it's your personal guide to mastering the art of problem-solving, one challenge at a time.
