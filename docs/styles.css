@@ -307,3 +307,99 @@ footer {
         padding: 1.2rem 1rem;
     }
 } 
+
+.disabled-link {
+    pointer-events: none;  /* disables clicking */
+    color: gray;           /* makes it look inactive */
+    text-decoration: none;
+    cursor: not-allowed;
+  }
+
+  .disabled-link i {
+    margin-left: 6px; /* Adjust gap as needed */
+  }
+
+/* About Me Section Styles */
+#about .about-card {
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    border-radius: 1.5rem;
+    padding: 2.5rem 2.8rem;
+    margin: 0 auto 2.5rem auto;
+    max-width: 800px;
+    font-size: 1.15rem;
+    color: var(--text-color);
+    line-height: 1.85;
+    letter-spacing: 0.01em;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+#about .about-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(124, 58, 237, 0.13);
+    transform: translateY(-4px) scale(1.01);
+}
+#about .about-card p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+#about .about-card a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+#about .about-card a:hover {
+    color: var(--secondary-color);
+}
+#about .about-card strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+#about .about-card em {
+    font-style: italic;
+    color: var(--secondary-color);
+}
+#about .about-card blockquote {
+    font-style: italic;
+    color: #454547;
+    padding-left: 0;
+    margin: 32px auto 0 auto;
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: 'Inter', serif;
+    text-align: center;
+    background: none;
+    border: none;
+    position: relative;
+}
+#about .about-card blockquote::before {
+    content: "\201C";
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    position: absolute;
+    left: 50%;
+    top: -18px;
+    transform: translateX(-50%);
+    line-height: 1;
+    font-family: serif;
+    opacity: 0.25;
+}
+@media (max-width: 600px) {
+    #about .about-card {
+        padding: 1.2rem 0.7rem;
+        font-size: 1rem;
+    }
+}
+
+blockquote {
+    font-style: italic;
+    color: #161616;
+    /* border-left: 4px solid #4ade80; */
+    padding-left: 16px;
+    margin: 24px auto;
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: 'Inter', serif;
+    text-align: justify;
+  }
