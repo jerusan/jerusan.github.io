@@ -78,35 +78,39 @@ nav ul li a:hover::after {
 }
 
 #hero {
-    padding: 8rem 0 4rem;
+    padding: 3.5rem 0 2rem;
+    min-height: 220px;
     text-align: center;
-    background: var(--primary-gradient);
+    background: linear-gradient(120deg, #7f5af0 0%, #4f46e5 100%), var(--primary-gradient);
     color: #fff;
-    border-radius: 0 0 2.5rem 2.5rem;
-    box-shadow: 0 8px 32px 0 rgba(124, 58, 237, 0.08);
+    border-radius: 0 0 1.5rem 1.5rem;
+    box-shadow: 0 4px 24px 0 rgba(124, 58, 237, 0.10);
+    position: relative;
+    overflow: hidden;
 }
 
 #hero h1 {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     font-weight: 800;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.03em;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.02em;
 }
 
 #hero h2 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: #e0e7ef;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
 }
 
 #hero p {
     color: #e0e7ef;
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
 }
 
 .social-links {
-    margin-top: 2rem;
+    margin-top: 1.2rem;
 }
 
 .social-links a {
@@ -408,33 +412,38 @@ blockquote {
 .hero-flex {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
     justify-content: center;
-    padding: 3rem 0 2rem;
+    gap: 2.2rem;
+    flex-wrap: wrap;
+    padding: 1.2rem 0 0.5rem;
 }
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 2px 12px rgba(60,72,88,0.10);
-    background: #fff;
+.hero-flex h1,
+.hero-flex h2,
+.hero-flex p,
+.hero-flex .social-links {
+    margin: 0;
 }
-.hero-info {
-    flex: 1;
-    text-align: left;
+.hero-flex .social-links {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    margin-left: 0.5rem;
 }
 @media (max-width: 700px) {
     .hero-flex {
         flex-direction: column;
-        gap: 1.2rem;
+        gap: 0.7rem;
         text-align: center;
+        padding: 0.7rem 0 0.2rem;
     }
-    .hero-info {
-        text-align: center;
+    .hero-flex .social-links {
+        justify-content: center;
+        margin-left: 0;
     }
 }
+
+/* Remove .hero-info styles since it's not used anymore */
+.hero-info { display: none !important; }
 
 /* --- ABOUT FLEX --- */
 .about-flex {
@@ -610,4 +619,52 @@ section {
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 1.2rem;
+}
+
+.hero-flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.18rem;
+    padding: 1.2rem 0 0.5rem;
+}
+.hero-name-row,
+.hero-title-row,
+.hero-location-row,
+.hero-contacts-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-name-row h1,
+.hero-title-row h2,
+.hero-location-row p {
+    margin: 0;
+    text-align: center;
+}
+.hero-title-row {
+    margin-top: 0.08rem;
+    margin-bottom: 0.08rem;
+}
+.hero-location-row {
+    margin-top: 0.08rem;
+    margin-bottom: 0.08rem;
+}
+.hero-contacts-row {
+    margin-top: 0.15rem;
+}
+.hero-contacts-row .social-links {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+@media (max-width: 700px) {
+    .hero-flex-col {
+        gap: 0.13rem;
+    }
+    .hero-contacts-row .social-links {
+        justify-content: center;
+    }
 }
