@@ -139,21 +139,39 @@ section h2 {
 }
 
 /* Card Layouts */
-.education-item, .experience-item, .project-item, .skill-category {
-    background: var(--card-bg);
-    border-radius: 1.2rem;
-    box-shadow: var(--shadow);
-    padding: 2rem 2.2rem;
-    margin-bottom: 2rem;
-    transition: box-shadow 0.2s, transform 0.2s;
+.card, .education-item, .experience-item, .project-item {
+    background: linear-gradient(135deg, #f8f9ff 60%, #f3e8ff 100%);
+    box-shadow: 0 8px 32px 0 rgba(124, 58, 237, 0.10), 0 1.5px 8px 0 rgba(80, 80, 120, 0.04);
+    border-radius: 1.7rem;
+    border: 1.5px solid #ede9fe;
+    padding: 2.2rem 2rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+    animation: aboutFadeIn 1.1s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
-
-.education-item:hover, .experience-item:hover, .project-item:hover, .skill-category:hover {
-    box-shadow: 0 8px 32px 0 rgba(124, 58, 237, 0.13);
-    transform: translateY(-4px) scale(1.02);
+.card::before, .education-item::before, .experience-item::before, .project-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 7px;
+    background: linear-gradient(90deg, #a78bfa 0%, #818cf8 100%);
+    border-top-left-radius: 1.7rem;
+    border-top-right-radius: 1.7rem;
 }
-
-.education-item h3, .experience-item h3, .project-item h3 {
+.card a, .education-item a, .experience-item a, .project-item a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid #a78bfa33;
+    transition: border-color 0.2s, color 0.2s;
+    padding-bottom: 1.5px;
+}
+.card a:hover, .education-item a:hover, .experience-item a:hover, .project-item a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid #818cf8;
+}
+.card h3, .education-item h3, .experience-item h3, .project-item h3 {
     color: var(--primary-color);
     font-size: 1.2rem;
     margin-bottom: 0.3rem;
@@ -307,8 +325,11 @@ footer {
         gap: 1.2rem;
     }
 
-    .education-item, .experience-item, .project-item, .skill-category {
-        padding: 1.2rem 1rem;
+    .card, .education-item, .experience-item, .project-item {
+        padding: 1.1rem 0.7rem 1.1rem 0.7rem;
+    }
+    .card::before, .education-item::before, .experience-item::before, .project-item::before {
+        height: 5px;
     }
 } 
 
@@ -325,73 +346,82 @@ footer {
 
 /* About Me Section Styles */
 #about .about-card {
-    background: var(--card-bg);
-    box-shadow: var(--shadow);
-    border-radius: 1.5rem;
-    padding: 2.5rem 2.8rem;
+    background: linear-gradient(135deg, #f8f9ff 60%, #f3e8ff 100%);
+    box-shadow: 0 8px 32px 0 rgba(124, 58, 237, 0.10), 0 1.5px 8px 0 rgba(80, 80, 120, 0.04);
+    border-radius: 1.7rem;
+    border: 1.5px solid #ede9fe;
+    padding: 2.8rem 2.5rem 2.5rem 2.5rem;
     margin: 0 auto 2.5rem auto;
     max-width: 800px;
     font-size: 1.15rem;
     color: var(--text-color);
-    line-height: 1.85;
+    line-height: 1.7;
     letter-spacing: 0.01em;
-    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    animation: aboutFadeIn 1.1s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
-#about .about-card:hover {
-    box-shadow: 0 8px 32px 0 rgba(124, 58, 237, 0.13);
-    transform: translateY(-4px) scale(1.01);
+#about .about-card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 7px;
+    background: linear-gradient(90deg, #a78bfa 0%, #818cf8 100%);
+    border-top-left-radius: 1.7rem;
+    border-top-right-radius: 1.7rem;
 }
 #about .about-card p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.7rem;
     text-align: justify;
+    line-height: 1.45;
 }
 #about .about-card a {
     color: var(--primary-color);
     font-weight: 700;
-    text-decoration: underline;
-    transition: color 0.2s;
+    text-decoration: none;
+    border-bottom: 2px solid #a78bfa33;
+    transition: border-color 0.2s, color 0.2s;
+    padding-bottom: 1.5px;
 }
 #about .about-card a:hover {
     color: var(--secondary-color);
-}
-#about .about-card strong {
-    color: var(--primary-color);
-    font-weight: 700;
-}
-#about .about-card em {
-    font-style: italic;
-    color: var(--secondary-color);
+    border-bottom: 2px solid #818cf8;
 }
 #about .about-card blockquote {
     font-style: italic;
-    color: #454547;
-    padding-left: 0;
-    margin: 32px auto 0 auto;
+    color: #6d28d9;
+    padding-left: 1.2rem;
+    margin: 36px auto 0 auto;
     max-width: 700px;
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.25rem;
+    line-height: 1.7;
     font-family: 'Inter', serif;
-    text-align: center;
+    text-align: left;
     background: none;
-    border: none;
+    border-left: 4px solid #a78bfa;
+    border-radius: 0 0.7rem 0.7rem 0;
     position: relative;
+    box-shadow: none;
 }
 #about .about-card blockquote::before {
-    content: "\201C";
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    position: absolute;
-    left: 50%;
-    top: -18px;
-    transform: translateX(-50%);
-    line-height: 1;
-    font-family: serif;
-    opacity: 0.25;
+    content: none;
+}
+@keyframes aboutFadeIn {
+    from { opacity: 0; transform: translateY(30px) scale(0.98); }
+    to { opacity: 1; transform: none; }
 }
 @media (max-width: 600px) {
     #about .about-card {
-        padding: 1.2rem 0.7rem;
+        padding: 1.2rem 0.7rem 1.1rem 0.7rem;
         font-size: 1rem;
+    }
+    #about .about-card::before {
+        height: 5px;
+    }
+    #about .about-card blockquote {
+        font-size: 1.08rem;
+        padding-left: 0.7rem;
     }
 }
 
